@@ -1,0 +1,77 @@
+Vector Space Model Search Engine
+This project is a ranked retrieval search engine built from scratch in Python for the CSD358 Information Retrieval assignment. The system uses the Vector Space Model with an lnc.ltc weighting scheme to rank text documents from a corpus against user queries.
+
+Features
+Vector Space Model: Implements the lnc.ltc cosine similarity ranking scheme.
+
+Positional Index: Builds a positional index to store the exact location of every word, enabling advanced search features.
+
+Phrase Search (Novelty Feature): Allows users to search for exact phrases by wrapping their query in double quotes (e.g., "information retrieval").
+
+Soundex Algorithm: Includes a phonetic matching algorithm to find terms that sound alike, helping with spelling variations in names.
+
+Text Preprocessing: A complete pipeline for text normalization, including tokenization, stop-word removal, and Porter Stemming.
+
+Modular Codebase: The project is organized into five distinct modules for clarity and maintainability.
+
+Project Structure
+The code is split into five Python files:
+
+main.py: The main entry point that runs the program.
+
+preprocessing.py: Contains all functions for cleaning and normalizing text.
+
+soundex.py: Contains the implementation of the Soundex algorithm.
+
+indexer.py: Responsible for reading the corpus and building the search index.
+
+search.py: Contains all logic for query processing, ranking, and scoring documents.
+
+How to Run
+Follow these steps to run the search engine.
+
+1. Prerequisites:
+
+Python 3.x
+
+pip (Python package installer)
+
+2. Setup:
+
+Clone this repository to your local machine.
+
+Place all your .txt document files inside the corpus folder. If the folder doesn't exist, please create it in the main project directory.
+
+The script will attempt to install the nltk library automatically if it's not found. However, you can also install it manually:
+
+pip install nltk
+
+3. Execution:
+
+Navigate to the project's root directory in your terminal.
+
+Run the main.py script:
+
+python main.py
+
+The program will first build the index from the documents in the corpus folder. After that, it will run two pre-defined test cases and then start an interactive search loop.
+
+Usage
+Once the program is running, you can type your queries into the terminal.
+
+Free-Text Query: Simply type your search terms and press Enter.
+
+query> zomato business account
+
+Phrase Search: To search for an exact phrase, enclose your query in double quotes.
+
+query> "ancient family"
+
+To Exit: Type exit or quit and press Enter.
+
+Team Members
+Nilaansh Mathur - 2310110537
+
+Manasvi Vedanta - 2210110385
+
+Shivam Doriya - 2310110598
